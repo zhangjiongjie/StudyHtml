@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Starbuzz Bean Machine</title>
+        <link rel="stylesheet" href="starbuzz.css">
+        <link rel="stylesheet" href="form.css">
+    </head>
+
+    <body>
+        <h1>The Starbuzz Bean Machine</h1>
+        <h2>Fill Out the form below and click "order now" to order</h2>
+        <form action="http://starbuzzcoffee.com/processorder.php" method="get">
+            <div class="tablerow">
+                <p>Choose your beans:</p>
+                <p>
+                    <select name="beans" id="beans">
+                        <option value="House Blend">House Blend</option>
+                        <option value="Bolivia">Shade Grown Bolivia Supremo</option>
+                        <option value="Guatemala">Organic Guatemala</option>
+                        <option value="Kenya">Kenya</option>
+                    </select>
+                </p>
+            </div>
+            
+            <div class="tablerow">
+                <p>Type:</p>
+                <p>
+                    <input type="radio" name="beantype" id="beantype1" value="whole"> Whole bean <br>
+                    <input type="radio" name="beantype" id="beantype2" value="ground" checked> Ground
+                </p>  
+            </div>
+
+            <div class="tablerow">
+                <p>Number of bags:</p>
+                <p><input type="number" name="bags" id="bags" min="1" max="10"></p>
+            </div>
+
+            <div class="tablerow">
+                <p>Must arrive by date:</p>
+                <p><input type="date" name="date" id="date"></p>
+            </div>
+            
+            <div class="tablerow">
+                <p>Extras:</p>
+                <p>
+                    <input type="checkbox" name="extras[]" id="extras[]1" value="giftwrap">Gift warp <br>
+                    <input type="checkbox" name="extras[]" id="extras[]2" value="catalog" checked>Include catalog 
+                    with order
+                </p>
+                
+            </div>
+
+            <div class="tablerow">
+                <p class="heading">Ship to:</p>
+                <p></p>
+            </div>
+
+            <div class="tablerow">
+                <p>Name:</p>
+                <p><input type="text" name="name" placeholder="Buckaroo Banzai" required></p>
+            </div>
+            <div class="tablerow">
+                <p>Address:</p>
+                <p><input type="text" name="address" placeholder="Banzai Institute"></p>
+            </div>
+            <div class="tablerow">
+                <p>City:</p>
+                <p><input type="text" name="city" placeholder="Los Angeles"></p>
+            </div>
+            <div class="tablerow">
+                <p>State:</p>
+                <p><input type="text" name="state" placeholder="CA"></p>
+            </div>
+            <div class="tablerow">
+                <p>Zip:</p>
+                <p><input type="text" name="zip" placeholder="90050"></p>
+            </div>
+            <div class="tablerow">
+                <p>Phone:</p>
+                <p><input type="text" name="phone" placeholder="310-555-1212"></p>
+            </div>
+            <div class="tablerow">
+                <p>Customer Comments:</p>
+                <p><textarea name="comments" id="comments" cols="30" rows="10"></textarea></p>
+            </div>
+            <div>
+                <p></p>
+                <p><input type="submit" value="Order Now"></p>
+            </div>
+        </form>
+    </body>
+</html>
